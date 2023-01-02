@@ -27,6 +27,36 @@ Serving the HTML pages.
 Testing the webserver
 
 # PROGRAM:
+```
+from http.server import HTTPServer, BaseHTTPRequestHandler
+
+content = """
+<html>
+<head>
+</head>
+<body>
+<h1>welcome</h1> 
+<h2>WEBFRAMEWORK</h2>
+<h3>NAME:R.KARTHIKEYAN</h3>
+<h4>REF.NO:22002525</h4>
+</body>
+</html>
+"""
+
+class HelloHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header('content-type', 'text/html; charse=utf -8')
+        self.end_headers()
+        self.wfile.write(content.encode())
+
+
+server_address = ('',80)
+httpd = HTTPServer(server_address,HelloHandler) 
+httpd.serve_forever()  
+```
+
+
 
 # OUTPUT:
 
