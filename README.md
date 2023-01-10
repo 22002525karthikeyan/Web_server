@@ -39,26 +39,20 @@ content = """
 <h2>WEBFRAMEWORK</h2>
 <h3>NAME:R.KARTHIKEYAN</h3>
 <h4>REF.NO:22002525</h4>
+<h5>DJANGO</h5>
+<h6>ASP.NET</h6>
+<h7>SPRING</h7>
+<h8>MEAN & MERN</h8>
 </body>
 </html>
-"""
 
-class HelloHandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header('content-type', 'text/html; charse=utf -8')
-        self.end_headers()
-        self.wfile.write(content.encode())
-
-
-server_address = ('',80)
-httpd = HTTPServer(server_address,HelloHandler) 
-httpd.serve_forever()  
-```
+````
 
 
 
 # OUTPUT:
+![](web1.png.png)
+
 
 # RESULT:
 
